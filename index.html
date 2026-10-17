@@ -95,7 +95,7 @@ function card(i, p) {
   return `<div class="card" id="c${i}"><h3><span class="n">${i+1}</span>${name}</h3>
     ${hl}
     <div class="truth">Ground truth: <b>7.00% p.a.</b> on balances above ₹3 lakh up to ₹25 lakh (effective 1 Sep 2026). ${p.n} flagged ${p.n === 1 ? 'line' : 'lines'} on this page.</div>
-    <div class="chips">${chip(p.url, 'Open page')}${chip(p.anchor, 'Jump to the line')}</div>
+    <div class="chips">${chip(p.url, 'Open page')}${chip(p.snippets[0].anchor, 'Jump to the line')}</div>
   </div>`;
 }
 async function render() {
